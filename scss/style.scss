@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
+
+section{
+    width: 100%; height: 100vh; overflow: hidden;
+
+    .pictxt{
+        width: 500px;
+        position: relative; top:40%; left: 100px; 
+        border: 2px solid pink; overflow: hidden;
+        transition: 1s; opacity: 0;
+
+        &.on{
+            opacity: 1;
+            h2{opacity: 1; margin-left: 0px;}
+            p{opacity: 1; transform: translateY(0px);}
+        }
+        h2{
+            font: 20px/1 'arial'; color: #000;
+            margin-bottom: 20px;
+            margin-left: 200px; opacity: 0; transition:2s;
+        }
+        p{
+            font: 15px/1.2 'arial'; color: #222;
+            transform: translateY(40px); transition: 2s;
+        }
+    }
+
+    .slide{
+        width: 500px; height: 300px; 
+        position: relative; top: 50%; left: 50%;
+        margin-top: -250px;
+        border: 2px solid #000;
+        overflow: hidden;
+
+        .list{
+            width: 3000px; height: 100%;
+            margin-left: -100%; 
+            li{
+                width: 500px; height: 100%; 
+                float: left; 
+            }
+            .slide1{background-color: pink;}
+            .slide2{background-color: lightblue;}
+            .slide3{background-color: lightgreen;}
+            .slide4{background-color: lightsalmon;}
+            .slide5{background-color: lightyellow;}
+            .slide6{background-color: orange;}
+        }
+    }
+    
+
+    a{
+        display: inline-block; width: 50px; height: 50px;
+        border: 2px solid pink;
+        position: relative; top: 200px; left: 200px;
+    }
+    .svgspan{
+        display: block; margin-bottom: 20px;position: absolute; left: 100px; top: 20px;
+        width: 50px ; height: 50px; border: 1px solid pink;
+        path{
+            fill: transparent;
+            stroke: orangered;
+            stroke-width: 10px;
+            stroke-linejoin:round;
+            stroke-linecap: round;
+            //stroke-dasharray: 2660;
+            transition:5s
+        }
+        &:hover{path{animation-name:ani;
+            animation-duration:.4s;}}
+    }
+    .test{
+        width: 60px; height: 60px;
+        position: absolute; left: 100px; top: 100px;
+        border:1px solid pink;
+
+        .form{
+            display: block;
+            width: 50px; height: 50px; border: 10px solid #eee;
+            position:fixed; left:0; top:0;
+            border-radius: 50em;
+        }
+        .circle{
+            display: block;
+            width: 50px; height: 50px; 
+            border: 10px solid #eee;
+            border-top: 10px solid #000;
+            position:fixed; left:0; top:0; border-radius: 50em;
+        }
+
+
+    }
+
+    @keyframes ani {
+        0%{fill: #eee;}
+        100%{fill: orangered;}
+    }
+
+}

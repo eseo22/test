@@ -1,3 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+  section .pictxt {
+    width: 500px;
+    position: relative;
+    top: 40%;
+    left: 100px;
+    border: 2px solid pink;
+    overflow: hidden;
+    transition: 1s;
+    opacity: 0; }
+    section .pictxt.on {
+      opacity: 1; }
+      section .pictxt.on h2 {
+        opacity: 1;
+        margin-left: 0px; }
+      section .pictxt.on p {
+        opacity: 1;
+        transform: translateY(0px); }
+    section .pictxt h2 {
+      font: 20px/1 'arial';
+      color: #000;
+      margin-bottom: 20px;
+      margin-left: 200px;
+      opacity: 0;
+      transition: 2s; }
+    section .pictxt p {
+      font: 15px/1.2 'arial';
+      color: #222;
+      transform: translateY(40px);
+      transition: 2s; }
+  section .slide {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    border: 2px solid #000;
+    overflow: hidden; }
+    section .slide .list {
+      width: 3000px;
+      height: 100%;
+      margin-left: -100%; }
+      section .slide .list li {
+        width: 500px;
+        height: 100%;
+        float: left; }
+      section .slide .list .slide1 {
+        background-color: pink; }
+      section .slide .list .slide2 {
+        background-color: lightblue; }
+      section .slide .list .slide3 {
+        background-color: lightgreen; }
+      section .slide .list .slide4 {
+        background-color: lightsalmon; }
+      section .slide .list .slide5 {
+        background-color: lightyellow; }
+      section .slide .list .slide6 {
+        background-color: orange; }
+  section a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid pink;
+    position: relative;
+    top: 200px;
+    left: 200px; }
+  section .svgspan {
+    display: block;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid pink; }
+    section .svgspan path {
+      fill: transparent;
+      stroke: orangered;
+      stroke-width: 10px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      transition: 5s; }
+    section .svgspan:hover path {
+      animation-name: ani;
+      animation-duration: .4s; }
+  section .test {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    border: 1px solid pink; }
+    section .test .form {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 10px solid #eee;
+      position: fixed;
+      left: 0;
+      top: 0;
+      border-radius: 50em; }
+    section .test .circle {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 10px solid #eee;
+      border-top: 10px solid #000;
+      position: fixed;
+      left: 0;
+      top: 0;
+      border-radius: 50em; }
+@keyframes ani {
+  0% {
+    fill: #eee; }
+  100% {
+    fill: orangered; } }
 
 /*# sourceMappingURL=style.css.map */
