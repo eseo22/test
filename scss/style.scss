@@ -24,7 +24,7 @@ section{
             margin-left: 200px; opacity: 0; transition:2s;
         }
         p{
-            font: 15px/1.2 'arial'; color: #222;
+            font: 15px/1.2 'arial'; color: #222; opacity: 0;
             transform: translateY(40px); transition: 2s;
         }
     }
@@ -59,45 +59,57 @@ section{
         position: relative; top: 200px; left: 200px;
     }
     .svgspan{
-        display: block; margin-bottom: 20px;position: absolute; left: 100px; top: 20px;
+        display: block; margin-bottom: 20px;
+        position: absolute; left: 100px; top: 20px;
         width: 50px ; height: 50px; border: 1px solid pink;
         path{
             fill: transparent;
-            stroke: orangered;
-            stroke-width: 10px;
+            stroke: #444;
+            stroke-width: 20px;
             stroke-linejoin:round;
             stroke-linecap: round;
-            //stroke-dasharray: 2660;
-            transition:5s
+            stroke-dasharray: 1600;
+            stroke-dashoffset: 1600;
+            transition:5s;
+            transform: scale(0.8);
+            transform-origin: center center;
         }
         &:hover{path{animation-name:ani;
-            animation-duration:.4s;}}
+            animation-duration:2s;}}
     }
-    .test{
-        width: 60px; height: 60px;
-        position: absolute; left: 100px; top: 100px;
-        border:1px solid pink;
+    // .test{
+    //     width: 60px; height: 60px;
+    //     position: absolute; left: 100px; top: 100px;
+    //     border:1px solid pink;
+    //     &:hover{.circle{animation-name:circleani;
+    //         animation-duration:1s;}}
+    //     .form{
+    //         display: block;
+    //         width: 50px; height: 50px; border: 10px solid #eee;
+    //         position:fixed; left:0; top:0;
+    //         border-radius: 50em;
+    //     }
+    //     .circle{
+    //         display: block;
+    //         width: 50px; height: 50px; 
+    //         border: 10px solid #eee;
+    //         border-top: 10px solid #eee;
+    //         position:fixed; left:0; top:0; border-radius: 50em;
+           
+    //     }
 
-        .form{
-            display: block;
-            width: 50px; height: 50px; border: 10px solid #eee;
-            position:fixed; left:0; top:0;
-            border-radius: 50em;
-        }
-        .circle{
-            display: block;
-            width: 50px; height: 50px; 
-            border: 10px solid #eee;
-            border-top: 10px solid #000;
-            position:fixed; left:0; top:0; border-radius: 50em;
-        }
 
-
-    }
+    // }
 
     @keyframes ani {
-        0%{fill: #eee;}
-        100%{fill: orangered;}
+        0%{stroke-dashoffset: 1500;}
+        100%{stroke-dashoffset: 0;}
     }
-
+    // @keyframes circleani{
+    //     0%{border-top: 10px solid #eee;}
+    //     25%{border-left: 10px solid #000;}
+    //     50%{border-bottom: 10px solid #000;}
+    //     75%{border-right: 10px solid #000;}
+    //     100%{border: 10px solid #000;}
+    // }
 }

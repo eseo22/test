@@ -40,6 +40,7 @@ section {
     section .pictxt p {
       font: 15px/1.2 'arial';
       color: #222;
+      opacity: 0;
       transform: translateY(40px);
       transition: 2s; }
   section .slide {
@@ -90,44 +91,22 @@ section {
     border: 1px solid pink; }
     section .svgspan path {
       fill: transparent;
-      stroke: orangered;
-      stroke-width: 10px;
+      stroke: #444;
+      stroke-width: 20px;
       stroke-linejoin: round;
       stroke-linecap: round;
-      transition: 5s; }
+      stroke-dasharray: 1600;
+      stroke-dashoffset: 1600;
+      transition: 5s;
+      transform: scale(0.8);
+      transform-origin: center center; }
     section .svgspan:hover path {
       animation-name: ani;
-      animation-duration: .4s; }
-  section .test {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 100px;
-    top: 100px;
-    border: 1px solid pink; }
-    section .test .form {
-      display: block;
-      width: 50px;
-      height: 50px;
-      border: 10px solid #eee;
-      position: fixed;
-      left: 0;
-      top: 0;
-      border-radius: 50em; }
-    section .test .circle {
-      display: block;
-      width: 50px;
-      height: 50px;
-      border: 10px solid #eee;
-      border-top: 10px solid #000;
-      position: fixed;
-      left: 0;
-      top: 0;
-      border-radius: 50em; }
+      animation-duration: 2s; }
 @keyframes ani {
   0% {
-    fill: #eee; }
+    stroke-dashoffset: 1500; }
   100% {
-    fill: orangered; } }
+    stroke-dashoffset: 0; } }
 
 /*# sourceMappingURL=style.css.map */
