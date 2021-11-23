@@ -4,112 +4,92 @@
 ul,ol,li{list-style: none;}
 a{text-decoration: none;}
 
-section{
-    width: 100%; height: 100vh; overflow: hidden;
+// .swiper{
+//     width: 100%; height: 100vh;
+//     .swiper-wrapper{
+//         width: 100%; height: 100%;
 
-    .pictxt{
-        width: 500px;
-        position: relative; top:40%; left: 100px; 
-        border: 2px solid pink; overflow: hidden;
-        transition: 1s; opacity: 0;
+//         .swiper-slide{
+//             width: 100%; height: 100%;
+            
+//             .slide1{
+//                 //overflow: hidden;
+//                 >div{
+//                     width: 100%; height: 100%;
+//                     background-image: url(../img/2.png);
+//                     object-fit: cover;
 
-        &.on{
-            opacity: 1;
-            h2{opacity: 1; margin-left: 0px;}
-            p{opacity: 1; transform: translateY(0px);}
-        }
-        h2{
-            font: 20px/1 'arial'; color: #000;
-            margin-bottom: 20px;
-            margin-left: 200px; opacity: 0; transition:2s;
-        }
-        p{
-            font: 15px/1.2 'arial'; color: #222; opacity: 0;
-            transform: translateY(40px); transition: 2s;
-        }
-    }
+//                     &:nth-of-type(1){
+//                         clip-path: inset(0% 75% 0% 0%);
+//                     }
+//                     &:nth-of-type(2){
+//                         clip-path: inset(0% 50% 0% 25%);
+//                     }
+//                     &:nth-of-type(3){
+//                         clip-path: inset(0% 25% 0% 50%);
+//                     }
+//                     &:nth-of-type(4){
+//                         clip-path: inset(0% 0% 0% 75%);
+//                     }
+//                 }
+//             }
+        
+//         }
+//     }
+// }
 
-    .slide{
-        width: 500px; height: 300px; 
-        position: relative; top: 50%; left: 50%;
-        margin-top: -250px;
-        border: 2px solid #000;
-        overflow: hidden;
-
-        .list{
-            width: 3000px; height: 100%;
-            margin-left: -100%; 
-            li{
-                width: 500px; height: 100%; 
-                float: left; 
-            }
-            .slide1{background-color: pink;}
-            .slide2{background-color: lightblue;}
-            .slide3{background-color: lightgreen;}
-            .slide4{background-color: lightsalmon;}
-            .slide5{background-color: lightyellow;}
-            .slide6{background-color: orange;}
-        }
-    }
+main{
+    width: 100%; height: 100vh;
+    position: relative;
     
+    .swiper-wrapper{
+        width: calc(100% * 3); height: 100%;
+        
+        
+        .swiper-slide{
+            
+            width: (100% / 3); height: 100%;
+            
+            >div img{
+                width: 100%; height: 100%;
+                object-fit: cover;
+                position: absolute; top: 0; left: 0;
+                transition: 2s;
+                
 
-    a{
-        display: inline-block; width: 50px; height: 50px;
-        border: 2px solid pink;
-        position: relative; top: 200px; left: 200px;
-    }
-    .svgspan{
-        display: block; margin-bottom: 20px;
-        position: absolute; left: 100px; top: 20px;
-        width: 50px ; height: 50px; border: 1px solid pink;
-        path{
-            fill: transparent;
-            stroke: #444;
-            stroke-width: 20px;
-            stroke-linejoin:round;
-            stroke-linecap: round;
-            stroke-dasharray: 1600;
-            stroke-dashoffset: 1600;
-            transition:5s;
-            transform: scale(0.8);
-            transform-origin: center center;
+                &:nth-of-type(1) img{
+                    clip-path: inset(0% 75% 0% 0%);
+                }
+                &:nth-of-type(2) img{
+                    clip-path: inset(0% 50% 0% 25%);
+                }
+                &:nth-of-type(3) img{
+                    clip-path: inset(0% 25% 0% 50%);
+                }
+                &:nth-of-type(4) img{
+                    clip-path: inset(0% 0% 0% 75%);
+                }
+    
+                &:hover{
+                    &:nth-of-type(1){
+                        clip-path: inset(0% 100% 0% 0%);
+                    }
+                    &:nth-of-type(2){
+                        clip-path: inset(0% 75% 0% 25%);
+                    }
+                    &:nth-of-type(3){
+                        clip-path: inset(0% 50% 0% 50%);
+                    }
+                    &:nth-of-type(4){
+                        clip-path: inset(0% 25% 0% 75%);
+                    }
+    
+                }
+            }
+
+            
+
         }
-        &:hover{path{animation-name:ani;
-            animation-duration:2s;}}
+        
     }
-    // .test{
-    //     width: 60px; height: 60px;
-    //     position: absolute; left: 100px; top: 100px;
-    //     border:1px solid pink;
-    //     &:hover{.circle{animation-name:circleani;
-    //         animation-duration:1s;}}
-    //     .form{
-    //         display: block;
-    //         width: 50px; height: 50px; border: 10px solid #eee;
-    //         position:fixed; left:0; top:0;
-    //         border-radius: 50em;
-    //     }
-    //     .circle{
-    //         display: block;
-    //         width: 50px; height: 50px; 
-    //         border: 10px solid #eee;
-    //         border-top: 10px solid #eee;
-    //         position:fixed; left:0; top:0; border-radius: 50em;
-           
-    //     }
-
-
-    // }
-
-    @keyframes ani {
-        0%{stroke-dashoffset: 1500;}
-        100%{stroke-dashoffset: 0;}
-    }
-    // @keyframes circleani{
-    //     0%{border-top: 10px solid #eee;}
-    //     25%{border-left: 10px solid #000;}
-    //     50%{border-bottom: 10px solid #000;}
-    //     75%{border-right: 10px solid #000;}
-    //     100%{border: 10px solid #000;}
-    // }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,38 +8,105 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script defer src="js/custom.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            var swiper = new Swiper(".swiper", {
+                loop: true,
+                spaceBetween: 0,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }
+            });
+        })
+
+    </script> -->
 </head>
+
 <body>
-    <section>
-        <div class="pictxt">
-            <h2>hello Lorem ipsum dolor sit.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi alias laboriosam id. Asperiores, voluptatibus doloremque?</p>
+    <!-- <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+            <div class="swiper-slide slide2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="swiper-slide slide3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>           
+            <div class="swiper-slide slide4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
         </div>
         
-        <div class="slide">
-            <ul class="list">
-                <li class="slide1" >a</li>
-                <li class="slide2">b</li>
-                <li class="slide3">c</li>
-                <li class="slide4" >d</li>
-                <li class="slide5">e</li>
-                <li class="slide6">f</li>
-            </ul>
-        </div>
-        
-        <a href="#" class="prev">prev</a>
-        <a href="#" class="next">next</a>
+    </div> -->
 
-        <span class="svgspan">
-            <svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>
-            
-        </span>
-        <div class="test">
-            <span class="form"></span>
-            <span class="circle"></span>
+    <main class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div>
+                    <img src="img/2.png" alt="">
+                </div>
+                <div>
+                    <img src="img/2.png" alt="">
+
+                </div>
+                <div>
+                    <img src="img/2.png" alt="">
+
+                </div>
+                <div>
+                    <img src="img/2.png" alt="">
+
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div>
+                    <img src="img/5.png" alt="">
+                </div>
+                <div>
+                    <img src="img/5.png" alt="">
+
+                </div>
+                <div>
+                    <img src="img/5.png" alt="">
+
+                </div>
+                <div>
+                    <img src="img/5.png" alt="">
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div><img src="img/up.jpg" alt=""></div>
+                <div><img src="img/up.jpg" alt=""></div>
+                <div><img src="img/up.jpg" alt=""></div>
+                <div><img src="img/up.jpg" alt=""></div>
+
+            </div>
         </div>
 
-    </section>
+    </main>
 </body>
+
 </html>
