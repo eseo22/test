@@ -8,7 +8,6 @@ console.log(list);
     
 
 // })
-
 setInterval(function(){
     $(list).addClass("on");
     
